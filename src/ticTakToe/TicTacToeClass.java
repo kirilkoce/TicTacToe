@@ -16,28 +16,24 @@ public class TicTacToeClass {
 	}
 
 	// Accessor Methods
-
-	public boolean isWinner(char p) {
+    public boolean isWinner(char p) {
 
 		for (int i = 0; i < 3; i++) {
-			// check row winner
+			// check the rows winner
 			if (board[i][0] == p && board[i][1] == p && board[i][2] == p) {
 				return true;
-			// check row winner
 			} else if (board[0][i] == p && board[1][i] == p && board[2][i] == p) {
 				return true;
 			}
 		}
-        // check diagonals winner
-		if (board[0][0] == p && board[1][1] == p && board[2][2] == p) {
+        // check the diagonals winner
+		    if (board[0][0] == p && board[1][1] == p && board[2][2] == p) {
 			return true;
-		}
-		// check diagonals winner
-		if (board[0][2] == p && board[1][1] == p && board[2][0] == p) {
+		    }
+		    if (board[0][2] == p && board[1][1] == p && board[2][0] == p) {
 			return true;
-		}
-
-		return false;
+		    }
+            return false;
 	}
 
 	public boolean isFull()
@@ -45,7 +41,6 @@ public class TicTacToeClass {
 		if (turns == 9) {
 			return true;
 		}
-		
 		else {
 			return false;
 		}
@@ -55,7 +50,6 @@ public class TicTacToeClass {
 		if(isFull() == true) {
 			return true;
 		}
-		
 		return false;
 	}
 
